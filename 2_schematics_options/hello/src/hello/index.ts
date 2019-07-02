@@ -36,7 +36,7 @@ export function hello(_options: any): Rule {
 
     return tree;
 
-    // TODO 13. add new option in both schema.d.ts and schema.json ( for example greeting type, use enum type and specify possible values )\
+    // TODO 13. add new option in both schema.d.ts and schema.json ( for example greeting type, use enum type and specify possible values )
 
     // TODO 14. add default value (eg Hello) and x-prompt for the new property
 
