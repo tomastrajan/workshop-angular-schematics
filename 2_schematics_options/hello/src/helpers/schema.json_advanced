@@ -1,5 +1,17 @@
 {
+    "name": {
+        "type": "string",
+        "description": "The name of the person we want to say hello to...",
+        "$default": {
+            "$source": "argv",
+            "index": 0
+        },
+        "x-prompt": "What is the name of the person we  want to greet?"
+    },
     "greeting": {
-
+        "type": "string",
+        "enum": ["Hello", "Ola", "Ahoj"],
+        "default": "Hello",
+        "x-prompt": "Whats the greeting we want to use?"
     }
 }

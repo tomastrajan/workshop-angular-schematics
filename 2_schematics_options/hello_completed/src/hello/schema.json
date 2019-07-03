@@ -15,11 +15,9 @@
       "x-prompt": "What is the name of the person we  want to greet?"
     },
     "greeting": {
-      "enum": ["Hello", "Ola", "Ahoj"],
       "type": "string",
-      "description": "The type of greeting we want to use",
-      "default": "Hello",
-      "x-prompt": "What kind of greeting do we want to use?"
+      "enum": ["Hello", "Ola", "Ahoj"],
+      "default": "Hello"
     }
   },
   "required": [

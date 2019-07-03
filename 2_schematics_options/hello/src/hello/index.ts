@@ -12,9 +12,9 @@ import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
 
 // TODO 6. copy "initial" content into schema.json file from ./helpers folder
 
-// TODO 7. add name property to the schema.json ( specify its type, add description )
+// TODO 7. add name property to the schema.json ( specify its type to be string and add short description ) and make it required
 
-// TODO 8. reference schema.json in the collection.json file for hello schematics ( using  schema property and path to file )
+// TODO 8. reference schema.json in the collection.json file for hello schematics ( using "schema" property with path to file as a value )
 
 export function hello(_options: any): Rule {
 
@@ -36,10 +36,20 @@ export function hello(_options: any): Rule {
 
     return tree;
 
-    // TODO 13. add new option in both schema.d.ts and schema.json ( for example greeting type, use string type and specify possible values in enum array property )
+    // TODO 13. add new "greeting" option in both schema.d.ts and schema.json, it will be of a string type
+    // in schema.json we will also list possible values using enum property with an array of possible values like Hello, Ola, or Ahoj
 
-    // TODO 14. add default value (eg Hello) and x-prompt for the new property
+    // TODO 14. add default value (eg Hello) and x-prompt (with the question about greeting we want to use) for the new property in schema.json file
 
-    // TODO 15. use new property to replace hardcoded "Hello" in the generated file content
+    // TODO 15. get the new "greeting" property from _options and replace hardcoded "Hello" in the generated file content
+
+    // TODO 16. build and run schematics with --name param, but WITHOUT --greeting param (mind --dry-run=false because of the dev mode)
+    // you should see that the schmatics will ask you about the missing "greeting" parameter and give you a choice to select value
+
+    // TODO 17. take a look in ./helpers/schema.json_advanced and copy its content to replace properties in schema.json
+    // this adjusts name property definition with "$default" which enables us to pass in name without --name property
+    // the name will be taken as a positional property from command line ( "$source": "argv" ) as the first argument ( "index": 0 )
+
+    // TODO 18. try to remove "x-prompt" from greetings and run schematics again to see it will use default value when no --greeting option was provided
   };
 }
