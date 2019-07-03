@@ -7,7 +7,7 @@ export function hello(_options: any): Rule {
 
   return (tree: Tree, _context: SchematicContext) => {
 
-    // TODO 1. create variable for desired file name
+    // TODO 1. create variable for desired file name (eg hello.js)
 
     // TODO 2. create variable with the content of the created file (try using javascript template strings)
 
