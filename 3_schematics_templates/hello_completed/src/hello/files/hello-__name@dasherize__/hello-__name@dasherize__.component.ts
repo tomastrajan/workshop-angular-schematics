@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
     template: `<h1><%= greeting %> {{name}}</h1>`
 })
 export class Hello<%= classify(name) %>Component {
-    name = '<%= name %>'
+    name = '<%= addExclamation(name) %>'
 }

@@ -6,7 +6,8 @@ import { Schema as HelloOptions } from './schema';
 
 // TODO 2. create "files/" folder in the "hello/" folder
 
-// TODO 3. create folder inside of the "files/" folder using template syntax ( __variable@helper__ ), "hello-__name@dasherize__"
+// TODO 3. create folder inside of the "files/" folder using template syntax ( __variable@helper__ )
+// "hello-__name@dasherize__" ( expresion is separated with 2 underscores )
 
 // TODO 4. create file inside of the newly created template folder with name "hello-__name@dasherize__.component.ts"
 
@@ -38,9 +39,21 @@ export function hello(_options: HelloOptions): Rule {
 
     return tree;
 
-    // TODO 10. build and run schematics (mind --dry-run because of the dev mode)
+    // TODO 10. build and run schematics (mind --dry-run because of the dev mode) and explore generated file
 
-    // TODO 11. run schematics with --force flag ( this now works because we're using proper templating )
+    // TODO 11. try running schematics again without deleting file ( you should see warning that the file exists )
+
+    // TODO 12. run schematics with --force flag ( this now works because we're using proper templating )
+
   };
 
 }
+
+// TODO 13. create and export addExclamation() function which accepts value of type string as an argument
+// and returns that string plus exclamation mark ( ! ) (or in other words it returns "value!" for "value"
+
+// TODO 14. pass addExclamation function into the template options { ..._options, ...strings, addExclamation }
+
+// TODO 15. use add exclamation in the template by changing name = '<%= name %>' to name = '<%= addExclamation(name) %>'
+
+// TODO 16. build and run schematics (mind --dry-run because of the dev mode) and explore generated file
