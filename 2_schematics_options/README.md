@@ -2,8 +2,10 @@
 
 # Hints
 
-* don't forget to run `npm run build` (or run `npm run build:watch` in other console) so that you compile
-  your Typescript source code into javascript which can be executed using `schematics` command
+* every exercise is described step by step inside of the `./hello/src/hello.index.ts` file in form of the TODO comments
+
+* don't forget to run `npm run build` (or run `npm run build:watch` in other console) in the base `./hello` folder so 
+  that you compile your Typescript source code into javascript which can be executed using `schematics` command
 
 * always rememeber to running `schematics` command with the `--dry-run=false` flag  to actualy perform changes to 
   the file system because by default Angular Schematics run in dry run mode when executing schematics collection using
